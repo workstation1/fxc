@@ -7,7 +7,7 @@ import (
 
 // defaultMainnetConfig - default config for fxc mainnet
 const defaultMainnetConfig = `[Eth]
-NetworkId = 52
+NetworkId = 36920
 SyncMode = "fast"
 NoPruning = false
 NoPrefetch = false
@@ -72,7 +72,7 @@ IdleTimeout = 120000000000`
 
 // defaultTestnetConfig - default config for fxc testnet
 const defaultTestnetConfig = `[Eth]
-NetworkId = 53
+NetworkId = 36921
 SyncMode = "fast"
 NoPruning = false
 NoPrefetch = false

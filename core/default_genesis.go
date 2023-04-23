@@ -6,7 +6,7 @@ import (
 
 const defaultMainnetGenesis = `{
   "config": {
-    "chainId": 52, 
+    "chainId": 36920, 
     "homesteadBlock": 0,
     "eip150Block": 0,
     "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
