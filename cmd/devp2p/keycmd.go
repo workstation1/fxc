@@ -58,12 +58,12 @@ var (
 	tcpPortFlag = cli.IntFlag{
 		Name:  "tcp",
 		Usage: "TCP port of the node",
-		Value: 36652,
+		Value: 36920,
 	}
 	udpPortFlag = cli.IntFlag{
 		Name:  "udp",
 		Usage: "UDP port of the node",
-		Value: 36652,
+		Value: 36920,
 	}
 )
 
