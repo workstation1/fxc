@@ -47,7 +47,7 @@ Blocks = 20
 Percentile = 60
 
 [Node]
-IPCPath = "cetd.ipc"
+IPCPath = "fttd.ipc"
 HTTPHost = "localhost"
 NoUSB = true
 InsecureUnlockAllowed = false
@@ -112,7 +112,7 @@ Blocks = 20
 Percentile = 60
 
 [Node]
-IPCPath = "cetd.ipc"
+IPCPath = "fttd.ipc"
 HTTPHost = "localhost"
 NoUSB = true
 InsecureUnlockAllowed = false
@@ -135,7 +135,7 @@ ReadTimeout = 30000000000
 WriteTimeout = 30000000000
 IdleTimeout = 120000000000`
 
-// loadDefaultConfig - load default config for csc
+// loadDefaultConfig - load default config for fxc
 func loadDefaultConfig(cfg *gethConfig, isTestnet bool) error {
 	if isTestnet {
 		log.Trace("load testnet default config")

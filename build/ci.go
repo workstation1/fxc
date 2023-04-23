@@ -67,7 +67,7 @@ var (
 	// Files that end up in the geth*.zip archive.
 	gethArchiveFiles = []string{
 		"COPYING",
-		executablePath("cetd"),
+		executablePath("fttd"),
 	}
 
 	// Files that end up in the geth-alltools*.zip archive.
@@ -76,7 +76,7 @@ var (
 		executablePath("abigen"),
 		executablePath("bootnode"),
 		executablePath("evm"),
-		executablePath("cetd"),
+		executablePath("fttd"),
 		executablePath("puppeth"),
 		executablePath("rlpdump"),
 		executablePath("clef"),
@@ -97,8 +97,8 @@ var (
 			Description: "Developer utility version of the EVM (Ethereum Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode.",
 		},
 		{
-			BinaryName:  "cetd",
-			Description: "Coinex Smart Chain CLI client.",
+			BinaryName:  "fttd",
+			Description: "Ftx Chain CLI client.",
 		},
 		{
 			BinaryName:  "puppeth",

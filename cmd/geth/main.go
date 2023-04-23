@@ -46,7 +46,7 @@ import (
 )
 
 const (
-	clientIdentifier = "cetd" // Client identifier to advertise over the network
+	clientIdentifier = "fttd" // Client identifier to advertise over the network
 )
 
 var (
@@ -54,7 +54,7 @@ var (
 	gitCommit = ""
 	gitDate   = ""
 	// The app that holds all commands and flags.
-	app = flags.NewApp(gitCommit, gitDate, "the cetd command line interface")
+	app = flags.NewApp(gitCommit, gitDate, "the fttd command line interface")
 	// flags that configure the node
 	nodeFlags = []cli.Flag{
 		utils.IdentityFlag,
@@ -229,7 +229,7 @@ func init() {
 	// Initialize the CLI app and start Geth
 	app.Action = geth
 	app.HideVersion = true // we have a command to print the version
-	app.Copyright = "Copyright 2013-2020 The go-ethereum Authors and CSC Authors"
+	app.Copyright = "Copyright 2013-2020 The go-ethereum Authors and FXC Authors"
 	app.Commands = []cli.Command{
 		// See chaincmd.go:
 		initCommand,
@@ -307,13 +307,13 @@ func prepare(ctx *cli.Context) {
 	// If we're running a known preset, log it for convenience.
 	switch {
 	case ctx.GlobalIsSet(utils.TestnetFlag.Name):
-		log.Info("Starting cetd on testnet...")
+		log.Info("Starting fttd on testnet...")
 
 	case ctx.GlobalIsSet(utils.DeveloperFlag.Name):
-		log.Info("Starting cetd in ephemeral dev mode...")
+		log.Info("Starting fttd in ephemeral dev mode...")
 
 	case !ctx.GlobalIsSet(utils.NetworkIdFlag.Name):
-		log.Info("Starting cetd on mainnet...")
+		log.Info("Starting fttd on mainnet...")
 	}
 	// If we're a full node on mainnet without --cache specified, bump default cache allowance
 	if ctx.GlobalString(utils.SyncModeFlag.Name) != "light" && !ctx.GlobalIsSet(utils.CacheFlag.Name) && !ctx.GlobalIsSet(utils.NetworkIdFlag.Name) {

@@ -134,7 +134,7 @@ var (
 	}
 	TestnetFlag = cli.BoolFlag{
 		Name:  "testnet",
-		Usage: "Testnet network: pre-configured csc test network",
+		Usage: "Testnet network: pre-configured fxc test network",
 	}
 	DeveloperFlag = cli.BoolFlag{
 		Name:  "dev",
@@ -1812,7 +1812,7 @@ func MakeGenesis(ctx *cli.Context) *core.Genesis {
 	return genesis
 }
 
-func createCscEthereum(cfg *eth.Config, stack *node.Node) *eth.Ethereum {
+func createFxcEthereum(cfg *eth.Config, stack *node.Node) *eth.Ethereum {
 	ethereum, err := eth.New(stack, cfg)
 	if err != nil {
 		Fatalf("Failed to register Ethereum protocol: %v", err)
@@ -1865,7 +1865,7 @@ func MakeChain(ctx *cli.Context, stack *node.Node, ethCfg *eth.Config, readOnly 
 	if config.Clique != nil {
 		engine = clique.New(config.Clique, chainDb)
 	} else if config.Senatus != nil {
-		ethereum := createCscEthereum(ethCfg, stack)
+		ethereum := createFxcEthereum(ethCfg, stack)
 		engine = ethereum.Engine()
 		chainDb = ethereum.ChainDb()
 	} else {

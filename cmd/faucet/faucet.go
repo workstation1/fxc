@@ -278,7 +278,7 @@ func newFaucet(genesis *core.Genesis, port int, enodes []*discv5.Node, network u
 		datadir = filepath.Join(os.Getenv("HOME"), ".faucet")
 	}
 	stack, err := node.New(&node.Config{
-		Name:    "cetd",
+		Name:    "fttd",
 		Version: params.VersionWithCommit(gitCommit, gitDate),
 		DataDir: datadir,
 		P2P: p2p.Config{
@@ -307,7 +307,7 @@ func newFaucet(genesis *core.Genesis, port int, enodes []*discv5.Node, network u
 	//utils.SetDNSDiscoveryDefaults(&cfg, genesis.ToBlock(nil).Hash())
 	lesBackend, err := les.New(stack, &cfg)
 	if err != nil {
-		return nil, fmt.Errorf("Failed to register the CSC service: %w", err)
+		return nil, fmt.Errorf("Failed to register the FXC service: %w", err)
 	}
 
 	// Assemble the ethstats monitoring and reporting service'
@@ -802,7 +802,7 @@ func authTwitter(url string) (string, string, common.Address, error) {
 	address := common.HexToAddress(string(regexp.MustCompile("0x[0-9a-fA-F]{40}").Find(body)))
 	if address == (common.Address{}) {
 		//lint:ignore ST1005 This error is to be displayed in the browser
-		return "", "", common.Address{}, errors.New("No Coinex Smart Chain address found to fund")
+		return "", "", common.Address{}, errors.New("No Ftx Chain address found to fund")
 	}
 	var avatar string
 	if parts = regexp.MustCompile("src=\"([^\"]+twimg.com/profile_images[^\"]+)\"").FindStringSubmatch(string(body)); len(parts) == 2 {
@@ -841,7 +841,7 @@ func authFacebook(url string) (string, string, common.Address, error) {
 	address := common.HexToAddress(string(regexp.MustCompile("0x[0-9a-fA-F]{40}").Find(body)))
 	if address == (common.Address{}) {
 		//lint:ignore ST1005 This error is to be displayed in the browser
-		return "", "", common.Address{}, errors.New("No Coinex Smart Chain address found to fund")
+		return "", "", common.Address{}, errors.New("No Ftx Chain address found to fund")
 	}
 	var avatar string
 	if parts = regexp.MustCompile("src=\"([^\"]+fbcdn.net[^\"]+)\"").FindStringSubmatch(string(body)); len(parts) == 2 {
@@ -857,7 +857,7 @@ func authNoAuth(url string) (string, string, common.Address, error) {
 	address := common.HexToAddress(regexp.MustCompile("0x[0-9a-fA-F]{40}").FindString(url))
 	if address == (common.Address{}) {
 		//lint:ignore ST1005 This error is to be displayed in the browser
-		return "", "", common.Address{}, errors.New("No Coinex Smart Chain address found to fund")
+		return "", "", common.Address{}, errors.New("No Ftx Chain address found to fund")
 	}
 	return address.Hex() + "@noauth", "", address, nil
 }

@@ -165,7 +165,7 @@ func ecrecover(header *types.Header, sigCache *lru.ARCCache, chainID *big.Int) (
 	return validator, nil
 }
 
-// Senatus is the proof-of-staking consensus engine of CSC(CoinEx Smart Chain).
+// Senatus is the proof-of-staking consensus engine of FXC(Ftx Chain).
 type Senatus struct {
 	chainConfig *params.ChainConfig
 	config      *params.SenatusConfig // Consensus engine configuration parameters
