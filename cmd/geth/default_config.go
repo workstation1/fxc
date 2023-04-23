@@ -5,7 +5,7 @@ import (
 	"github.com/naoina/toml"
 )
 
-// defaultMainnetConfig - default config for csc mainnet
+// defaultMainnetConfig - default config for fxc mainnet
 const defaultMainnetConfig = `[Eth]
 NetworkId = 52
 SyncMode = "fast"
@@ -70,7 +70,7 @@ ReadTimeout = 30000000000
 WriteTimeout = 30000000000
 IdleTimeout = 120000000000`
 
-// defaultTestnetConfig - default config for csc testnet
+// defaultTestnetConfig - default config for fxc testnet
 const defaultTestnetConfig = `[Eth]
 NetworkId = 53
 SyncMode = "fast"

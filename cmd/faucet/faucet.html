@@ -51,9 +51,9 @@
 						<div class="input-group">
 							<input id="url" name="url" type="text" class="form-control" placeholder="Input your Ftx Chain address..."/>
 							<span class="input-group-btn">
-								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Give me tCET<i class="fa fa-caret-down" aria-hidden="true"></i></button>
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Give me tFTT<i class="fa fa-caret-down" aria-hidden="true"></i></button>
 				        <ul class="dropdown-menu dropdown-menu-right">{{range $idx, $amount := .Amounts}}
-				          <li><a style="text-align: center;" onclick="tier={{$idx}}; symbol='tCET'; {{if $.Recaptcha}}grecaptcha.execute(){{else}}submit({{$idx}}){{end}}">{{$amount}} / {{index $.Periods $idx}}</a></li>{{end}}
+				          <li><a style="text-align: center;" onclick="tier={{$idx}}; symbol='tFTT'; {{if $.Recaptcha}}grecaptcha.execute(){{else}}submit({{$idx}}){{end}}">{{$amount}} / {{index $.Periods $idx}}</a></li>{{end}}
 				        </ul>
 							</span>
 						<span class="input-group-btn">

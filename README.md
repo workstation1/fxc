@@ -5,7 +5,7 @@ FtxChain is a smart contract chain that supports up to 101 validators. Aside fro
 
 ## fxc Features
 
-* Decentralization: Permission-free, anyone can become a validator by staking `CET`.
+* Decentralization: Permission-free, anyone can become a validator by staking `FTT`.
 * EVM compatibility: Fully compatible with Ethereum virtual machine(EVM), which means that almost all DApps, ecosystem components and tools on Ethereum can be migrated to `FXC` directly or with very small changes.
 * High performance: 600+ TPS, 3s block time
 

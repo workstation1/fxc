@@ -75,7 +75,7 @@ The validator.create command creates a new validator.
 	stakingCommand = cli.Command{
 		Action:    utils.MigrateFlags(staking),
 		Name:      "staking",
-		Usage:     "staking some cet to a existing validator",
+		Usage:     "staking some ftt to a existing validator",
 		ArgsUsage: "",
 		Flags: []cli.Flag{
 			utils.KeyStoreDirFlag,
@@ -133,7 +133,7 @@ The validator.create command creates a new validator.
 	withdrawStakingCommand = cli.Command{
 		Action:    utils.MigrateFlags(withdrawStaking),
 		Name:      "withdrawstake",
-		Usage:     "withdraw staking cet from a validator",
+		Usage:     "withdraw staking ftt from a validator",
 		ArgsUsage: "",
 		Flags: []cli.Flag{
 			utils.KeyStoreDirFlag,
